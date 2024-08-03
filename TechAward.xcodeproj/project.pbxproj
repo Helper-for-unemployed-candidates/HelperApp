@@ -29,6 +29,7 @@
 		A3990E4A2C56547C002B8FF0 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		A3990E4E2C568F4C002B8FF0 /* ProfessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionsView.swift; sourceTree = "<group>"; };
 		A3B41E7A2C550965009C0DBF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A3F697862C5E481800CE6135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		A37ABBE32C55025D00BADF74 /* TechAward */ = {
 			isa = PBXGroup;
 			children = (
+				A3F697862C5E481800CE6135 /* Info.plist */,
 				A37ABBE42C55025D00BADF74 /* TechAwardApp.swift */,
 				A37ABBF32C5502CF00BADF74 /* Models */,
 				A37ABBF22C5502C300BADF74 /* Views */,
@@ -311,6 +313,7 @@
 				DEVELOPMENT_TEAM = Q3LC8U3MMD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TechAward/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -340,6 +343,7 @@
 				DEVELOPMENT_TEAM = Q3LC8U3MMD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TechAward/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

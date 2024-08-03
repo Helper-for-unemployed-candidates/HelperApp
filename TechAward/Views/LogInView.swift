@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+struct LogInData: Codable {
+    var username: String = ""
+    var password: String = ""
+}
+
 struct LogInView: View {
     @Environment(\.dismiss) var dismiss
-    @Bindable var user: LogInData
+    @State private var user = LogInData()
     
     var body: some View {
         NavigationStack {
@@ -45,7 +50,7 @@ struct LogInView: View {
             print("Failed to encode")
             return
         }
-        let url = URL(string: "https://34.27.153.209:8100/api/v1/u/auth/sign-up")!
+        let url = URL(string: "https://104.197.130.41:8100/api/v1/u/auth/sign-in")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -62,5 +67,5 @@ struct LogInView: View {
 }
 
 #Preview {
-    LogInView(user: LogInData())
+    LogInView()
 }

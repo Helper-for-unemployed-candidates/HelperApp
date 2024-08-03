@@ -9,32 +9,32 @@ import SwiftUI
 import Observation
 
 struct WelcomeView: View {
-    @State private var logInData: LogInData?
-    @State private var signUpData: UserData?
+    @State private var isLoggingIn = false
+    @State private var isSigningUp = false
+    
     var body: some View {
         VStack {
             NavigationStack {
                 Spacer()
                 HStack(spacing: 100) {
                     Button {
-                        logInData = LogInData()
+                        isLoggingIn = true
                     } label: {
                         Text("Log In")
                     }
                     
                     Button {
-                        signUpData = UserData()
+                        isSigningUp = true
                     } label: {
                         Text("Sign Up")
                     }
                 }
                 .navigationTitle("Welcome!")
-                .sheet(item: $logInData) { item in
-                    LogInView(user: item)
-                        .presentationDetents([.medium])
+                .sheet(isPresented: $isLoggingIn) {
+                    LogInView()
                 }
-                .sheet(item: $signUpData) { item in
-                    SignUpView(user: item)
+                .sheet(isPresented: $isSigningUp) {
+                    SignUpView()
                 }
             }
         }
